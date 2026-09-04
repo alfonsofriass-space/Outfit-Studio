@@ -1,0 +1,25 @@
+# Credenciales y entorno
+.env
+
+# Base de datos local (MVP), incluidos los ficheros WAL/SHM de SQLite
+*.db
+*.db-wal
+*.db-shm
+outfit.db
+
+# Imágenes generadas localmente
+**/app/generated/
+
+# Salida de experimentos (imágenes + CSV)
+**/experiments/output/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/

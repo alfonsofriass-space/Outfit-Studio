@@ -1,0 +1,131 @@
+{
+  "outfit_id": 17,
+  "user_description": "camisa blanca de lino metida dentro del pantalón negro",
+  "outfit": {
+    "status": "ok",
+    "outfit_summary": "Look sobrio con la camisa metida dentro del pantalón",
+    "items": [
+      {
+        "category": "upper",
+        "item_type": "camisa",
+        "brand": null,
+        "color": "blanca",
+        "material": "lino",
+        "fit": null,
+        "details": [],
+        "certainty": "high",
+        "visual_phrase_en": "white linen shirt"
+      },
+      {
+        "category": "lower",
+        "item_type": "pantalón",
+        "brand": null,
+        "color": "negro",
+        "material": null,
+        "fit": null,
+        "details": [],
+        "certainty": "high",
+        "visual_phrase_en": "black trousers"
+      }
+    ],
+    "styling_notes_en": [
+      "white linen shirt tucked into black trousers"
+    ]
+  },
+  "image_prompt": "Exact reviewed flat-lay prompt",
+  "text_model": "gpt-5.4-nano",
+  "flat_lay_estimated_cost": 0.006,
+  "accessories_omitted": [],
+  "worn_view_preview": {
+    "generation_prompt": "Exact reference-based worn-view prompt",
+    "estimated_cost": 0.015
+  },
+  "product_search_items": [
+    {
+      "item_index": 0,
+      "query": "camisa blanca lino comprar online España",
+      "needs_details": false,
+      "message": null,
+      "estimated_cost": 0.03,
+      "search": {
+        "item_index": 0,
+        "attempt": 1,
+        "query": "camisa blanca lino comprar online España",
+        "additional_details": null,
+        "candidates": [
+          {
+            "title": "Camisa 100% lino",
+            "store": "Mango",
+            "product_url": "https://shop.mango.com/es/es/p/mujer/camisas/camisa-lino_17001234",
+            "price_text": "39,99 €"
+          }
+        ],
+        "model": "gpt-5.4-nano",
+        "web_search_calls": 1,
+        "input_tokens": 8700,
+        "output_tokens": 420,
+        "cost_estimate": 0.012265,
+        "created_at": "2026-07-27T18:00:00Z"
+      },
+      "attempts": 1,
+      "attempts_remaining": 2
+    },
+    {
+      "item_index": 1,
+      "query": "pantalón negro comprar online España",
+      "needs_details": false,
+      "message": null,
+      "estimated_cost": 0.03,
+      "search": null,
+      "attempts": 0,
+      "attempts_remaining": 3
+    }
+  ],
+  "images": [
+    {
+      "image_id": 31,
+      "generation_number": 1,
+      "generation_prompt": "Exact reviewed flat-lay prompt",
+      "image": {
+        "model": "gpt-image-2",
+        "quality": "low",
+        "size": "1024x1024",
+        "url_or_base64": "/images/original.png"
+      },
+      "cost_estimate": 0.006,
+      "created_at": "2026-07-22T18:00:00Z",
+      "worn_view": null
+    },
+    {
+      "image_id": 32,
+      "generation_number": 2,
+      "generation_prompt": "Exact reviewed flat-lay prompt\nAlternative composition of the exact same garments; do not add or remove any piece.",
+      "image": {
+        "model": "gpt-image-2",
+        "quality": "low",
+        "size": "1024x1024",
+        "url_or_base64": "/images/variation.png"
+      },
+      "cost_estimate": 0.006,
+      "created_at": "2026-07-22T18:01:00Z",
+      "worn_view": {
+        "worn_view_id": 5,
+        "source_image_id": 32,
+        "generation_prompt": "Exact reference-based worn-view prompt",
+        "image": {
+          "model": "gpt-image-2",
+          "quality": "low",
+          "size": "1024x1536",
+          "url_or_base64": "/images/worn.png"
+        },
+        "cost_estimate": 0.014137,
+        "created_at": "2026-07-22T18:02:00Z"
+      }
+    }
+  ],
+  "chosen_image_id": 32,
+  "is_favourite": false,
+  "regeneration_count": 1,
+  "regenerations_remaining": 2,
+  "created_at": "2026-07-22T17:59:00Z"
+}

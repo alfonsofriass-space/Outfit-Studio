@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    name: Backend · Python 3.12
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: outfit-app-back
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: outfit-app-back/.python-version
+          cache: pip
+          cache-dependency-path: |
+            outfit-app-back/pyproject.toml
+            outfit-app-back/requirements-dev.txt
+
+      - name: Install development dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Run the local-equivalent checks
+        run: python scripts/check.py
+
+  frontend:
+    name: Frontend · Node 20
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: outfit-app-front
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20.20.2
+          cache: npm
+          cache-dependency-path: outfit-app-front/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run the local-equivalent checks
+        run: npm run check
